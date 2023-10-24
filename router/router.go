@@ -2,12 +2,12 @@ package router
 
 import "github.com/gin-gonic/gin"
 
-func inicio() {
+func Inicio() {
+	//Inicializando Rota
 	router := gin.Default()
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
+	//Iniciando Rotas
+	inicializandoRotas(router)
+
+	//Rodando Servidor
 	router.Run() // listen and serve on 0.0.0.0:8080
 }
